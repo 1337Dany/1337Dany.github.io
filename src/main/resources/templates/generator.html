@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Fake Data Generator</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+<h1>Fake Data Generator</h1>
+
+<!-- Form for DataGeneratorRequest -->
+<form action="generator" method="post">
+    <label>Number of Records:
+        <input type="number" name="count" min="0" required value="0"/>
+    </label><br/>
+
+    <label>Language:
+        <select name="language">
+            <option value="en">English</option>
+            <option value="fr">French</option>
+            <option value="de">German</option>
+            <option value="es">Spanish</option>
+            <option value="it">Italian</option>
+            <option value="pl">Polish</option>
+            <option value="ru">Russian</option>
+            <option value="zh-CN">Chinese (Simplified)</option>
+            <option value="ja">Japanese</option>
+            <option value="ko">Korean</option>
+        </select>
+    </label><br/>
+
+    <label><input type="checkbox" name="includeAddress"/> Include Address</label><br/>
+    <label><input type="checkbox" name="includeUniversity"/> Include University</label><br/>
+    <label><input type="checkbox" name="includeCountry"/> Include Country</label><br/>
+    <label><input type="checkbox" name="includeEmail"/> Include Email</label><br/>
+    <label><input type="checkbox" name="includePhoneNumber"/> Include Phone Number</label><br/>
+    <label><input type="checkbox" name="includeGender"/> Include Gender</label><br/>
+    <label><input type="checkbox" name="includeJob"/> Include Job</label><br/>
+    <label><input type="checkbox" name="includeHobbies"/> Include Hobbies</label><br/>
+
+    <button type="submit">Generate</button>
+</form>
+
+<hr/>
+
+<!-- Table for displaying generated data -->
+<div th:if="${data.dtoList() != null and !data.dtoList().isEmpty()}">
+    <table>
+        <thead>
+        <tr>
+            <th th:each="header : ${columnHeaders}" th:text="${header}"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="row : ${#numbers.sequence(0, count -1)}">
+            <th:block th:with="rowIndex = ${row * columnsCount}">
+                <td th:if="${includeInitials}" th:text="${data.dtoList()[rowIndex + 0]}"></td>
+                <td th:if="${includeInitials}" th:text="${data.dtoList()[rowIndex + 1]}"></td>
+                <td th:if="${includeInitials}" th:text="${data.dtoList()[rowIndex + 2]}"></td>
+
+                <td th:if="${includeAddress}"
+                    th:text="${data.dtoList()[rowIndex + 3]}"></td>
+
+                <td th:if="${includeUniversity}"
+                    th:text="${data.dtoList()[rowIndex + 3 + (includeAddress ? 1 : 0)]}"></td>
+
+                <td th:if="${includeCountry}"
+                    th:text="${data.dtoList()[rowIndex + 3 + (includeAddress ? 1 : 0) + (includeUniversity ? 1 : 0)]}"></td>
+
+                <td th:if="${includeEmail}"
+                    th:text="${data.dtoList()[rowIndex + 3 + (includeAddress ? 1 : 0) + (includeUniversity ? 1 : 0) + (includeCountry ? 1 : 0)]}"></td>
+
+                <td th:if="${includePhoneNumber}"
+                    th:text="${data.dtoList()[rowIndex + 3 + (includeAddress ? 1 : 0) + (includeUniversity ? 1 : 0) +
+                                  (includeCountry ? 1 : 0) + (includeEmail ? 1 : 0)]}"></td>
+
+                <td th:if="${includeGender}"
+                    th:text="${data.dtoList()[rowIndex + 3 + (includeAddress ? 1 : 0) + (includeUniversity ? 1 : 0) +
+                                  (includeCountry ? 1 : 0) + (includeEmail ? 1 : 0) +
+                                  (includePhoneNumber ? 1 : 0)]}"></td>
+
+                <td th:if="${includeJob}"
+                    th:text="${data.dtoList()[rowIndex + 3 + (includeAddress ? 1 : 0) + (includeUniversity ? 1 : 0) +
+                                  (includeCountry ? 1 : 0) + (includeEmail ? 1 : 0) +
+                                  (includePhoneNumber ? 1 : 0) + (includeGender ? 1 : 0)]}"></td>
+
+                <td th:if="${includeHobbies}"
+                    th:text="${data.dtoList()[rowIndex + 3 + (includeAddress ? 1 : 0) + (includeUniversity ? 1 : 0) +
+                                  (includeCountry ? 1 : 0) + (includeEmail ? 1 : 0) +
+                                  (includePhoneNumber ? 1 : 0) + (includeGender ? 1 : 0) +
+                                  (includeJob ? 1 : 0)]}"></td>
+            </th:block>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

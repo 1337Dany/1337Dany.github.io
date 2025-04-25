@@ -1,0 +1,129 @@
+# English (en)
+en.first.name=First Name
+en.last.name=Last Name
+en.date.of.birth=Date of Birth
+en.address=Address
+en.university=University
+en.country=Country
+en.email=Email
+en.phone.number=Phone Number
+en.gender=Gender
+en.job=Occupation
+en.hobbies=Hobbies
+
+# French (fr)
+fr.first.name=Prénom
+fr.last.name=Nom de famille
+fr.date.of.birth=Date de naissance
+fr.address=Adresse
+fr.university=Université
+fr.country=Pays
+fr.email=Email
+fr.phone.number=Numéro de téléphone
+fr.gender=Genre
+fr.job=Profession
+fr.hobbies=Loisirs
+
+# German (de)
+de.first.name=Vorname
+de.last.name=Nachname
+de.date.of.birth=Geburtsdatum
+de.address=Adresse
+de.university=Universität
+de.country=Land
+de.email=E-Mail
+de.phone.number=Telefonnummer
+de.gender=Geschlecht
+de.job=Beruf
+de.hobbies=Hobbys
+
+# Spanish (es)
+es.first.name=Nombre
+es.last.name=Apellido
+es.date.of.birth=Fecha de nacimiento
+es.address=Dirección
+es.university=Universidad
+es.country=País
+es.email=Correo electrónico
+es.phone.number=Número de teléfono
+es.gender=Género
+es.job=Ocupación
+es.hobbies=Aficiones
+
+# Italian (it)
+it.first.name=Nome
+it.last.name=Cognome
+it.date.of.birth=Data di nascita
+it.address=Indirizzo
+it.university=Università
+it.country=Paese
+it.email=Email
+it.phone.number=Numero di telefono
+it.gender=Genere
+it.job=Occupazione
+it.hobbies=Hobby
+
+# Polish (pl)
+pl.first.name=Imię
+pl.last.name=Nazwisko
+pl.date.of.birth=Data urodzenia
+pl.address=Adres
+pl.university=Uniwersytet
+pl.country=Kraj
+pl.email=Email
+pl.phone.number=Numer telefonu
+pl.gender=Płeć
+pl.job=Zawód
+pl.hobbies=Zainteresowania
+
+# Russian (ru)
+ru.first.name=Имя
+ru.last.name=Фамилия
+ru.date.of.birth=Дата рождения
+ru.address=Адрес
+ru.university=Университет
+ru.country=Страна
+ru.email=Email
+ru.phone.number=Телефон
+ru.gender=Пол
+ru.job=Профессия
+ru.hobbies=Хобби
+
+# Chinese Simplified (zh-CN)
+zh-CN.first.name=名字
+zh-CN.last.name=姓氏
+zh-CN.date.of.birth=出生日期
+zh-CN.address=地址
+zh-CN.university=大学
+zh-CN.country=国家
+zh-CN.email=电子邮件
+zh-CN.phone.number=电话号码
+zh-CN.gender=性别
+zh-CN.job=职业
+zh-CN.hobbies=爱好
+
+# Japanese (ja)
+ja.first.name=名
+ja.last.name=姓
+ja.date.of.birth=生年月日
+ja.address=住所
+ja.university=大学
+ja.country=国
+ja.email=メール
+ja.phone.number=電話番号
+ja.gender=性別
+ja.job=職業
+ja.hobbies=趣味
+
+# Korean (ko)
+ko.first.name=이름
+ko.last.name=성
+ko.date.of.birth=생년월일
+ko.address=주소
+ko.university=대학교
+ko.country=국가
+ko.email=이메일
+ko.phone.number=전화번호
+ko.gender=성별
+ko.job=직업
+ko.hobbies=취미

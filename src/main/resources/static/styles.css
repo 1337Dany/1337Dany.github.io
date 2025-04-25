@@ -1,0 +1,152 @@
+:root {
+    --primary-color: #5c85d6;
+    --secondary-color: #2a4d69;
+    --background-color: #eef2f3;
+    --text-color: #2e2e2e;
+    --border-color: #cfd8dc;
+    --hover-color: #d9e4ea;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    --radius: 10px;
+    --transition: 0.4s ease-in-out;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.8;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 25px;
+}
+
+h1 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+form {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    max-width: 750px;
+    margin: 0 auto 40px;
+    transition: var(--transition);
+}
+
+form:hover {
+    transform: scale(1.02);
+}
+
+label {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+
+input[type="number"],
+select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius);
+    margin-top: 8px;
+    box-sizing: border-box;
+    font-size: 15px;
+    transition: var(--transition);
+}
+
+input[type="number"]:focus,
+select:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 5px var(--primary-color);
+}
+
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+    transform: scale(1.3);
+    accent-color: var(--primary-color);
+}
+
+button[type="submit"] {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    padding: 14px 22px;
+    font-size: 17px;
+    border-radius: var(--radius);
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    margin-top: 25px;
+    transition: var(--transition);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--secondary-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+hr {
+    border: 0;
+    height: 2px;
+    background-color: var(--border-color);
+    margin: 40px 0;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    margin: 25px 0;
+    box-shadow: var(--shadow);
+    background: #ffffff;
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+th, td {
+    border: none;
+    padding: 14px 18px;
+    text-align: left;
+    font-size: 15px;
+}
+
+th {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    font-weight: 700;
+    position: sticky;
+    top: 0;
+    text-transform: uppercase;
+}
+
+tr:nth-child(even) {
+    background-color: #f3f7f9;
+}
+
+tr:hover {
+    background-color: var(--hover-color);
+    transition: var(--transition);
+}
+
+@media (max-width: 768px) {
+    form {
+        padding: 20px;
+    }
+
+    th, td {
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+}
